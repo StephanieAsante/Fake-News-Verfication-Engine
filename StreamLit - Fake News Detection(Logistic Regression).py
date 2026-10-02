@@ -10,7 +10,7 @@ import time
 import pandas as pd
 import numpy as np
 from scipy.sparse import hstack
-import time
+
 # %%
 # Load the weights we froze
 fake_news_model = joblib.load('fake_news_detection_model')
