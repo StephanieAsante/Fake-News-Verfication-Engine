@@ -257,9 +257,10 @@ with col_output:
                     X_tfidf = tfidf_weights.transform([fully_combined_article])
                     
                     # B. One-Hot Encode categorical sentiment/emotion
+                    cat_feature_names = ['predicted_sentiment', 'predicted_emotion']
                     cat_df = pd.DataFrame(
-                        [[sentiment_input, emotion_input]], 
-                        columns=['predicted_sentiment', 'predicted_emotion']
+                        [[user_sentiment, user_emotion]], 
+                        columns=cat_feature_names
                     )
                     X_cat = onehot_weights.transform(cat_df)
                     
