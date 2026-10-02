@@ -259,7 +259,7 @@ with col_output:
                     # B. One-Hot Encode categorical sentiment/emotion
                     cat_feature_names = ['text_sentiment', 'text_emotion']
                     cat_df = pd.DataFrame(
-                        [[user_sentiment, user_emotion]], 
+                        [[sentiment_input, emotion_input]], 
                         columns=cat_feature_names
                     )
                     X_cat = onehot_weights.transform(cat_df)
